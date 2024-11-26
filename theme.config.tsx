@@ -2,10 +2,11 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  faviconGlyph: "✦",
+  // faviconGlyph: "✦",
   head: (
     <>
       <title>AutoPalp</title>
+      <link rel="icon" href="/favicon.png" type="image/png" />
     </>
   ),
   logo: <span>AutoPalp</span>,
