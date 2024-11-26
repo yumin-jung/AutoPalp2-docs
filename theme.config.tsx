@@ -5,7 +5,7 @@ const config: DocsThemeConfig = {
   faviconGlyph: "✦",
   head: (
     <>
-      <title>AutoPalp Docs</title>
+      <title>AutoPalp</title>
     </>
   ),
   logo: <span>AutoPalp</span>,
