@@ -1,0 +1,46 @@
+# Server
+
+## Quick Start
+
+Ensure you have a .env file.
+
+```
+git clone git@github.com:yumin-jung/AutoPalp-server.git
+cd AutoPalp-server
+pnpm i
+pnpm dev
+```
+
+## Code Structure
+
+```
+.
+├── config
+│   └── default.ts
+├── debug
+│   └── requests.rest
+├── firebase.js
+├── package.json
+├── pnpm-lock.yaml
+├── src
+│   ├── app.ts
+│   ├── controllers
+│   │   └── patient.controller.ts
+│   ├── middleware
+│   │   ├── auth.middleware.ts
+│   │   └── cors.middleware.ts
+│   ├── routes
+│   │   ├── auth.routes.ts
+│   │   └── patient.routes.ts
+│   └── utils
+│       ├── email.ts
+│       └── swagger.ts
+├── swagger.yaml
+└── tsconfig.json
+```
+
+config: Should remove (TODO)
+
+## Deployment
+
+https://port-0-autopalp-server-m3qr5oi138cff77f.sel4.cloudtype.app/
