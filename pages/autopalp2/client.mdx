@@ -1,5 +1,32 @@
 # Client(Unity)
 
+## Quick Start
+
+1. Clone git repository
+
+```bash copy
+git clone git@github.com:makelab-kaist/AutoPalp2.git
+```
+
+2. Open **Unity Hub** and Add cloned repository
+
+![add-repository](/img/autopalp2/add-repository.png)
+
+3. Open MainScene
+   - Assets > Scenes > MainScene
+
+![open-main-scene](/img/autopalp2/open-main-scene.png)
+
+4. Build MainScene to Meta Quest 3
+   - File > Build Settings
+
+![build-setting](/img/autopalp2/build-setting.png)
+
+5. Change Run Device to Meta Quest 3
+   - Android > Switch Platform > Change **Run Device** to Oculus Quest 3 > Build And Run
+
+![switch-run-device](/img/autopalp2/switch-run-device.png)
+
 ## Code Structure
 
 ```code
@@ -26,13 +53,13 @@ Assets
 ├── Scenes
 │   └── MainScene.unity
 └── Scripts
-    ├── AbdomenUISizeController.cs
-    ├── AbdominalRegionLineDrawer.cs
-    ├── AutoPalpResetManager.cs
-    ├── GameObjectToggler.cs
-    ├── PainScaleDisplay.cs
-    ├── PalpationCompletionHandler.cs
-    ├── PalpationSequenceManager.cs
-    └── SliderValueResetter.cs
-
+    ├── AbdomenUISizeController.cs
+    ├── AbdominalRegionLineDrawer.cs
+    ├── AutoPalpResetManager.cs
+    ├── GameObjectToggler.cs
+    ├── PainScaleDisplay.cs
+    ├── PalpationCompletionHandler.cs
+    ├── PalpationSequenceManager.cs
+    ├── SliderValueResetter.cs
+    └── WebSocketPatientTokenManager.cs
 ```
