@@ -1,65 +1,82 @@
+import { Steps, FileTree } from "nextra/components";
+
 # Client(Unity)
 
 ## Quick Start
 
-1. Clone git repository
+<Steps>
+
+### Clone git repository
 
 ```bash copy
 git clone git@github.com:makelab-kaist/AutoPalp2.git
 ```
 
-2. Open **Unity Hub** and Add cloned repository
+### Open **Unity Hub** and Add cloned repository
 
 ![add-repository](/img/autopalp2/add-repository.png)
 
-3. Open MainScene
-   - Assets > Scenes > MainScene
+### Open MainScene
+
+- Assets > Scenes > MainScene
 
 ![open-main-scene](/img/autopalp2/open-main-scene.png)
 
-4. Build MainScene to Meta Quest 3
-   - File > Build Settings
+### Build MainScene to Meta Quest 3
+
+- File > Build Settings
 
 ![build-setting](/img/autopalp2/build-setting.png)
 
-5. Change Run Device to Meta Quest 3
-   - Android > Switch Platform > Change **Run Device** to Oculus Quest 3 > Build And Run
+### Change Run Device to Meta Quest 3
+
+- Android > Switch Platform > Change **Run Device** to Oculus Quest 3 > Build And Run
 
 ![switch-run-device](/img/autopalp2/switch-run-device.png)
 
+</Steps>
+
 ## Code Structure
 
-```code
-Assets
-├── Abdomen Interface
-│   └── interface.fbx
-├── Audio
-│   ├── AdjustSize.mp3
-│   ├── Finish.mp3
-│   ├── Palpation.mp3
-│   └── TurnOn.mp3
-├── Hand Gesture
-│   ├── AutoPalp Grab Hand Pose.asset
-│   └── AutoPalp Grab Hand Shape.asset
-├── Images
-│   └── VAS.png
-├── Materials
-│   ├── Abdomen.mat
-│   ├── Black.mat
-│   ├── Default White.mat
-│   ├── Nine Region Blue.mat
-│   ├── Nine Region White.mat
-│   └── Transparent.mat
-├── Scenes
-│   └── MainScene.unity
-└── Scripts
-    ├── AbdomenUISizeController.cs
-    ├── AbdominalRegionLineDrawer.cs
-    ├── GameObjectToggler.cs
-    ├── PainScaleDisplay.cs
-    ├── PalpationSequenceManager.cs
-    └── WebSocketPatientTokenManager.cs
-```
+<FileTree>
+  <FileTree.Folder name="Assets" defaultOpen>
+    <FileTree.Folder name="Scripts" defaultOpen>
+      <FileTree.File name="AbdomenUISizeController.cs" />
+      <FileTree.File name="AbdominalRegionLineDrawer.cs" />
+      <FileTree.File name="GameObjectToggler.cs" />
+      <FileTree.File name="PainScaleDisplay.cs" />
+      <FileTree.File name="PalpationSequenceManager.cs" />
+      <FileTree.File name="WebSocketPatientTokenManager.cs" />
+    </FileTree.Folder>
+    <FileTree.Folder name="Abdomen Interface">
+      <FileTree.File name="interface.fbx" />
+    </FileTree.Folder>
+    <FileTree.Folder name="Audio">
+      <FileTree.File name="AdjustSize.mp3" />
+      <FileTree.File name="Finish.mp3" />
+      <FileTree.File name="Palpation.mp3" />
+      <FileTree.File name="TurnOn.mp3" />
+    </FileTree.Folder>
+    <FileTree.Folder name="Hand Gesture">
+      <FileTree.File name="AutoPalp Grab Hand Pose.asset" />
+      <FileTree.File name="AutoPalp Grab Hand Shape.asset" />
+    </FileTree.Folder>
+    <FileTree.Folder name="Images">
+      <FileTree.File name="VAS.png" />
+    </FileTree.Folder>
+    <FileTree.Folder name="Materials">
+      <FileTree.File name="Abdomen.mat" />
+      <FileTree.File name="Black.mat" />
+      <FileTree.File name="Default White.mat" />
+      <FileTree.File name="Nine Region Blue.mat" />
+      <FileTree.File name="Nine Region White.mat" />
+      <FileTree.File name="Transparent.mat" />
+    </FileTree.Folder>
+    <FileTree.Folder name="Scenes">
+      <FileTree.File name="MainScene.unity" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
 
 ## Manage Palpation Sequence
 

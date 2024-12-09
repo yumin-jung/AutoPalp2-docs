@@ -1,3 +1,5 @@
+import { FileTree } from "nextra/components";
+
 # Server
 
 ## Deployment
@@ -21,26 +23,33 @@ pnpm dev
 
 ## Code Structure
 
-```
-.
-├── debug
-│   └── requests.rest
-├── firebase.js
-├── package.json
-├── pnpm-lock.yaml
-├── src
-│   ├── app.ts
-│   ├── controllers
-│   │   └── patient.controller.ts
-│   ├── middleware
-│   │   ├── auth.middleware.ts
-│   │   └── cors.middleware.ts
-│   ├── routes
-│   │   ├── auth.routes.ts
-│   │   └── patient.routes.ts
-│   └── utils
-│       ├── email.ts
-│       └── swagger.ts
-├── swagger.yaml
-└── tsconfig.json
-```
+<FileTree>
+  <FileTree.Folder name="root" defaultOpen>
+    <FileTree.Folder name="src" defaultOpen>
+      <FileTree.File name="app.ts" />
+      <FileTree.Folder name="controllers">
+        <FileTree.File name="patient.controller.ts" />
+      </FileTree.Folder>
+      <FileTree.Folder name="middleware">
+        <FileTree.File name="auth.middleware.ts" />
+        <FileTree.File name="cors.middleware.ts" />
+      </FileTree.Folder>
+      <FileTree.Folder name="routes">
+        <FileTree.File name="auth.routes.ts" />
+        <FileTree.File name="patient.routes.ts" />
+      </FileTree.Folder>
+      <FileTree.Folder name="utils">
+        <FileTree.File name="email.ts" />
+        <FileTree.File name="swagger.ts" />
+      </FileTree.Folder>
+    </FileTree.Folder>
+    <FileTree.Folder name="debug">
+      <FileTree.File name="requests.rest" />
+    </FileTree.Folder>
+    <FileTree.File name="firebase.js" />
+    <FileTree.File name="package.json" />
+    <FileTree.File name="pnpm-lock.yaml" />
+    <FileTree.File name="swagger.yaml" />
+    <FileTree.File name="tsconfig.json" />
+  </FileTree.Folder>
+</FileTree>
