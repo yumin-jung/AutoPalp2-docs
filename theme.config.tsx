@@ -1,5 +1,6 @@
 import React from "react";
 import { DocsThemeConfig, useConfig, useTheme } from "nextra-theme-docs";
+import Script from 'next/script'
 
 const Logo = () => {
   const { theme, systemTheme } = useTheme();
@@ -82,7 +83,7 @@ const config: DocsThemeConfig = {
           {
             url: "/og-image.png",
             width: 1200,
-            height: 480,
+            height: 630,
             alt: "AutoPalp",
           },
         ],
@@ -125,10 +126,10 @@ const config: DocsThemeConfig = {
         />
         <meta name="og:image" content="/og-image.png" />
         <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="480" />
+        <meta property="og:image:height" content="630" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
-        <script dangerouslySetInnerHTML={{ __html: SEED_SCALE_COLOR_SCRIPT }} />
-        <script dangerouslySetInnerHTML={{ __html: NEXTRA_THEME_SCRIPT }} />
+        <Script dangerouslySetInnerHTML={{ __html: SEED_SCALE_COLOR_SCRIPT }} />
+        <Script dangerouslySetInnerHTML={{ __html: NEXTRA_THEME_SCRIPT }} />
       </>
     );
   },
