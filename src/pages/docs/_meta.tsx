@@ -1,5 +1,4 @@
 export default {
-  index: "Home",
   autopalp2: "AutoPalp v2",
   autopalp1: "AutoPalp v1",
   contact: {
