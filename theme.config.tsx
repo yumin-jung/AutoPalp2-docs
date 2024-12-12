@@ -23,25 +23,6 @@ const config: DocsThemeConfig = {
     link: "https://github.com/yumin-jung/AutoPalp2-docs",
   },
   docsRepositoryBase: "https://github.com/yumin-jung/AutoPalp2-docs",
-  useNextSeoProps() {
-    return {
-      titleTemplate: "%s - AutoPalp",
-      openGraph: {
-        type: "website",
-        url: "https://autopalp.vercel.app",
-        title: "AutoPalp",
-        siteName: "AutoPalp",
-        images: [
-          {
-            url: "/og-image.png",
-            width: 1200,
-            height: 630,
-            alt: "AutoPalp",
-          },
-        ],
-      },
-    };
-  },
   sidebar: {
     defaultMenuCollapseLevel: 2,
   },
@@ -49,7 +30,7 @@ const config: DocsThemeConfig = {
     placeholder: "Search",
   },
   footer: {
-    text: (
+    content: (
       <span>
         MIT {new Date().getFullYear()} ©{" "}
         <a href="https://make.kaist.ac.kr/" target="_blank">
