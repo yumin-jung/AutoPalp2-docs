@@ -1,8 +1,10 @@
 import React from "react";
 import { DocsThemeConfig, useConfig, useTheme } from "nextra-theme-docs";
 import Script from 'next/script'
+import { motion } from 'framer-motion'
+import { useRouter } from 'nextra/hooks'
 
-const Logo = () => {
+const SVG = () => {
   const { theme, systemTheme } = useTheme();
   const dark = theme === "system" ? systemTheme === "dark" : theme === "dark";
 
@@ -65,7 +67,28 @@ const SEED_SCALE_COLOR_SCRIPT = `(()=>{var e=document.documentElement,d=window.m
 const NEXTRA_THEME_SCRIPT = `(()=>{var e=document.documentElement,d=window.matchMedia("(prefers-color-scheme: dark)"),s=()=>{e.classList.remove("light"),e.classList.remove("dark"),d.matches?e.classList.add("dark"):e.classList.add("light")};"addEventListener"in d?d.addEventListener("change",s):"addListener"in d&&d.addListener(s),s()})();`;
 
 const config: DocsThemeConfig = {
-  logo: <Logo/>,
+  logo: function Logo() {
+    return (
+      <motion.div
+        className="flex items-center gap-1"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <motion.span>
+          {/* <Image
+            src="/img/logo_dark.png"
+            width={34}
+            height={34}
+            alt="suspensive logo"
+          /> */}
+        </motion.span>
+        <div className="relative">
+          <strong>AutoPalp</strong>
+          <span className="absolute text-[8px]">v2</span>
+        </div>
+      </motion.div>
+    )
+  },
   darkMode: false,
   project: {
     link: "https://github.com/yumin-jung/AutoPalp2-docs",
@@ -133,6 +156,19 @@ const config: DocsThemeConfig = {
       </>
     );
   },
+  main: ({ children }) => {
+    const router = useRouter()
+
+    return (
+      <motion.div
+        key={router.asPath}
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        {children}
+      </motion.div>
+    )
+  }
 };
 
 export default config;
