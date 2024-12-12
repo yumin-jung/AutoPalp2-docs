@@ -1,11 +1,13 @@
 {
-  "index": "Home",
-  "autopalp2": "AutoPalp v2",
-  "autopalp1": "AutoPalp v1",
-  "contact": {
-    "title": "Contact ↗",
+  "index": {
     "type": "page",
-    "href": "https://make.kaist.ac.kr/contact",
-    "newWindow": true
+    "display": "hidden",
+    "theme": {
+      "layout": "full"
+    }
+  },
+  "docs": {
+    "type": "page",
+    "title": "Documentation"
   }
 }
