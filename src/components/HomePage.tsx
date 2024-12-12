@@ -35,7 +35,7 @@ export const HomePage = ({
           </div>
           <p className="text-3xl">{description}</p>
         </div>
-        <Link href={`/docs/autopalp2`}>
+        <Link href={`/docs/autopalp2/introduction`}>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

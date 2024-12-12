@@ -1,6 +1,6 @@
 export default {
-  autopalp2: "AutoPalp v2",
-  autopalp1: "AutoPalp v1",
+  autopalp2: { title: 'AutoPalp v2'},
+  autopalp1: { title: 'AutoPalp v1'},
   contact: {
     title: "Contact ↗",
     type: "page",
