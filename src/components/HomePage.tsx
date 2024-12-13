@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { useRouter } from 'nextra/hooks'
 import { Link } from 'nextra-theme-docs'
 

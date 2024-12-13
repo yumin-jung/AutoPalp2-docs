@@ -1,6 +1,6 @@
 import React from "react";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { useRouter } from 'nextra/hooks'
 
 const config: DocsThemeConfig = {
