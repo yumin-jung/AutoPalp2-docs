@@ -52,13 +52,27 @@ const config: DocsThemeConfig = {
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* HTML Meta Tags */}
         <title>{title}</title>
-        <meta property="og:title" content={title || 'AutoPalp'} />
         <meta name="description" content={description} />
-        <meta property="og:description" content={description} />
+
+        {/* Facebook Meta Tags */}
         <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title || 'AutoPalp'} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content="/og-image.png" />
-        <meta property="og:site_name" content="AutoPalp"></meta>
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="autopalp.vercel.app" />
+        <meta property="twitter:url" content={url} />
+        <meta name="twitter:title" content={title || 'AutoPalp'} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="/og-image.png" />
+        <meta property="og:site_name" content="AutoPalp" />
+        
         <link rel="icon" type="image/x-icon" href="/favicon.png" />
       </>
     );
