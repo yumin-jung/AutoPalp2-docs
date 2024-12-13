@@ -13,7 +13,7 @@ const withNextra = nextra({
   mdxOptions: {
     rehypePrettyCodeOptions: {
       theme: {
-        dark: 'nord',
+        dark: 'min-dark',
         light: 'min-light'
       }
     }
