@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 import { useRouter } from 'nextra/hooks'
 
 const config: DocsThemeConfig = {
-  logo: function Logo() {
+  logo: () => {
     return (
       <motion.div
         className="flex items-center gap-1"
@@ -41,26 +41,25 @@ const config: DocsThemeConfig = {
     ),
   },
   head: () => {
-    const { frontMatter } = useConfig();
+    const config = useConfig<{ description?: string }>()
+    const { asPath } = useRouter()
+    const url = `https://autopalp.vercel.app${asPath}`
+    const title =
+      config.title !== 'Index' ? `${config.title} - AutoPalp` : 'AutoPalp'
+    const description =
+      config.frontMatter.description ?? 'Data Collection Enabled Algometer'
 
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="description"
-          content="Data Collection Enabled Algometer."
-        />
-        <meta name="og:type" content="website" />
-        <meta name="og:url" content="https://autopalp.vercel.app" />
-        <meta name="og:title" content={frontMatter.title || "AutoPalp"} />
-        <meta
-          name="og:description"
-          content="Data Collection Enabled Algometer."
-        />
-        <meta name="og:image" content="/og-image.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
+        <title>{title}</title>
+        <meta property="og:title" content={title || 'AutoPalp'} />
+        <meta name="description" content={description} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:site_name" content="AutoPalp"></meta>
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
       </>
     );
   },
