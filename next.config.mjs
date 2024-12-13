@@ -10,6 +10,14 @@ const withNextra = nextra({
   },
   codeHighlight: true,
   readingTime: true,
+  mdxOptions: {
+    rehypePrettyCodeOptions: {
+      theme: {
+        dark: 'nord',
+        light: 'min-light'
+      }
+    }
+  }
 })
 
 /**
